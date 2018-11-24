@@ -77,9 +77,9 @@
     </style>
 </head>
 <body>
-    <form method = 'POST' action = 'skill_check'>
+    <form method = 'POST' action = 'skill_check' enctype="multipart/form-data">
       <div class = "buttonholder">
-        <input type = "file" id = "file" accept = ".pdf">Please upload the Resume!</input>
+        <input type = "file" name = 'resume' accept = ".pdf">Please upload the Resume!</input>
         <button type="submit">Submit</button>
       </div>
     </form>
