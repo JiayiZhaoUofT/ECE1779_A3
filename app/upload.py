@@ -12,8 +12,7 @@ def upload():
 def upload_and_skill_check():
     #todo: upload PDF to s3
     file = request.files['resume']
-    filepath = os.path.join('app/static/user_images', file.filename)
-    file.save(filepath)
-    filename = file.filename
+    #filepath = os.path.join('app/static/user_images', file.filename)
+    #file.save(filepath)
     # s3_upload(filepath, filename)
     return render_template("/skillCheck.html")
