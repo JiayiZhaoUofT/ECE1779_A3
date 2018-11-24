@@ -9,5 +9,8 @@ def upload():
     return render_template("/upload.html")
 @webapp.route('/skill_check',methods=['POST'])
 def upload_and_skill_check():
-    #todo: upload PDF to dynamoDB
+    #todo: upload PDF to s3
+    file = request.files['file']
+    filename = file.filename
+
     return render_template("/skillCheck.html")
