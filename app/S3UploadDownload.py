@@ -1,8 +1,8 @@
 import boto3
 import botocore
 
-bucketName = "1779photobucket"
-s3_location = "https://s3-us-west-1.amazonaws.com/1779photobucket/"
+bucketName = "a3-resume"
+s3_location = "https://s3.amazonaws.com/a3-resume/"
 
 def s3_upload(filepath, bucketname, filename, acl = "public-read"):
     try:

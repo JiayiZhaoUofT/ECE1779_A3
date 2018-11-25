@@ -3,7 +3,7 @@ from app import webapp
 import os
 from app.S3UploadDownload import s3_upload
 
-bucketName = "1779photobucket"
+bucketName = "a3-resume"
 
 @webapp.route('/',methods=['GET'])
 @webapp.route('/index',methods=['GET'])
