@@ -1,5 +1,4 @@
 
 *.xml
 app/config.py
-app/config.py
 *.pyc

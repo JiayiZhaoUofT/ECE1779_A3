@@ -1,8 +1,7 @@
 import boto3
 import botocore
 import os
-#bucketName = "1779photobucket"
-#s3_location = "https://s3-us-west-1.amazonaws.com/1779photobucket/"
+
 bucketName = "a3-resume"
 s3_location = "https://s3.amazonaws.com/a3-resume/"
 
@@ -11,6 +10,7 @@ aws_config_arg = {
     'aws_secret_access_key': os.environ['aws_secret_access_key']
 }
 def s3_upload(filepath, bucketname, filename, acl = "public-read"):
+    print(os.environ['aws_access_key_id'])
     try:
         # s3 = boto3.client('s3')
         s3 = boto3.client('s3', **aws_config_arg)
