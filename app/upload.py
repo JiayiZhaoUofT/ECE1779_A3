@@ -1,4 +1,4 @@
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, flash
 from app import webapp
 import os
 from app.S3UploadDownload import s3_upload
@@ -13,11 +13,13 @@ def upload():
 
 @webapp.route('/skill_check',methods=['POST'])
 def upload_and_skill_check():
-    #todo: upload PDF to s3
+    if not request.files:
+        return render_template("/upload.html", error = "Please select a file!")
     file = request.files['resume']
     filepath = os.path.join('static', file.filename)
     print(filepath)
     file.save(filepath)
-    msg = s3_upload(filepath, bucketName,file.filename)
+    msg = s3_upload(filepath, bucketName, file.filename)
     print(msg)
     return render_template("/skillCheck.html")
+

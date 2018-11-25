@@ -79,6 +79,7 @@
 <body>
     <form method = 'POST' action = 'skill_check' enctype="multipart/form-data">
       <div class = "buttonholder">
+          {{ error if error != None }}
         <input type = "file" name = 'resume' accept = ".pdf">Please upload the Resume!</input>
         <button type="submit">Submit</button>
       </div>
