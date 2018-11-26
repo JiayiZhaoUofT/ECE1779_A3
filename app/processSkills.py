@@ -10,7 +10,6 @@ def check():
         res = {}
         for keyword in desiredSkills:
             if keyword in resume:
-                print(keyword)
                 res[keyword] = True
                 continue
             res[keyword] = False
